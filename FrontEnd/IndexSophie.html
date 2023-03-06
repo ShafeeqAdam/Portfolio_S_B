@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Sophie Bluel - Architecte d'intérieur</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/3b15a9ee58.js" crossorigin="anonymous"></script>
+    <meta name="description" content="">
+	<link rel="stylesheet" href="./assets/styleAdmin.css">
+</head>
+<body>
+    <div id="head">
+        <i class="fa-solid fa-pen-to-square"></i>
+        <div class="head_trigger">mode édition</div>
+        <div class="head_btn">publier les changements</div>
+    </div>
+<header>
+	<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
+	<nav>
+		<ul>
+			<li>projets</li>
+			<li>contact</li>
+			<li><a href="indexID.html">login</a></li> <!--ajout lien page admin-->
+			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
+		</ul>
+	</nav>
+</header>
+<main>
+	<section id="introduction">
+		<figure>
+			<img src="./assets/images/sophie-bluel.png" alt="">       
+		</figure>
+		<article>
+			<h2>Designer d'espace</h2>
+			<p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale du chantier.</p>
+			<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
+			<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
+		</article>
+	</section>
+    <section id="introduction_admin">
+		<figure>
+			<img src="./assets/images/sophie-bluel.png" alt="">
+            <a href=""><i class="fa-regular fa-pen-to-square"></i>modifier</a>
+		</figure>
+		<article>
+            <a href=""><i class="fa-regular fa-pen-to-square"></i>modifier</a>
+			<h2>Designer d'espace</h2>
+			<p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale du chantier.</p>
+			<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
+			<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
+		</article>
+	</section>
+	<section id="portfolio">
+		<h2>Mes Projets</h2>
+		<!--ajout des filtres (voir avec Luc si le choix button est pertinent)-->
+	<div class="filter">
+		<button class="btn-all">Tous</button>
+		<button class="btn-objects">Objets</button>
+		<button class="btn-flat">Appartements</button>
+		<button class="btn-hr">Hôtels & restaurants</button>
+	</div>
+		<!--fin filtres-->
+		<div class="gallery"></div>
+	</section>
+	<section id="portfolio_admin">
+        <div class="modification">
+        <h2>Mes Projets</h2>
+        <a href="#" id="modal-trigger"><i class="fa-regular fa-pen-to-square"></i>modifier</a>
+    </div>
+
+     <div id="modal-container">
+        <div id="modal-content">
+        <h2 id="modal-title">Galerie Photo</h2>
+        <span id="modal-close">&times;</span>
+        <div id="image-container"></div>
+        <div class="line"></div>
+        <div id="add-btn">Ajouter une photo</div>
+        <p class="delete">Supprimer la galerie</p>
+        </div>
+    </div>
+          
+    <!-- Deuxième modale pour ajouter une nouvelle photo -->
+    <div id="add-modal-container">
+        <div id="add-modal-content">
+        	<h2 id="add-modal-title">Ajout photo</h2>
+        	<span id="add-modal-back">&larr;</span>
+        	<span id="add-modal-close">&times;</span>
+        <form>
+            <div id="add-modal-photo">
+                <img id="preview" src=""> <!--ajout prev img-->        
+                <label for="file-input">+ Ajouter photo</label>
+                <input type="file" id="file-input" accept="image/png, image/jpeg"/>
+                <p class="add-modal-detail">JPG, PNG : 4Mo max</p>
+            </div>                      
+                <label for="add-modal-title-input">Titre</label>
+                <input id="add-modal-title-input" type="text" />
+                <label for="add-modal-category-input">Catégorie</label>
+                <select id="add-modal-category-input" name="category">
+                   	<option value="1">Objets</option>
+                   	<option value="2">Appartements</option>
+                	<option value="3">Hôtel & Restaurant</option>
+                    <option value="4">Bar & Restaurant</option>
+                    </select>
+            <div class="line"></div>
+            <div id="add-modal-submit-button">Valider</div>
+        </form>
+            </div>
+            </div>
+            <div class="gallery_bis"></div>
+	</section>
+	<section id="contact">
+		<h2>Contact</h2>
+		<p>Vous avez un projet ? Discutons-en !</p>
+		<form action="#" method="post">
+			<label for="name">Nom</label>
+			<input type="text" name="name" id="name">
+			<label for="email">Email</label>
+			<input type="email" name="email" id="email">
+			<label for="message">Message</label>
+			<textarea name="message" id="message" cols="30" rows="10"></textarea>
+			<input type="submit" value="Envoyer">
+		</form>
+	</section>
+</main>
+<footer>
+	<nav>
+		<ul>
+			<li>Mentions Légales</li>
+		</ul>
+	</nav>
+</footer>
+<script src="./assets/appAdmin.js"></script>
+</body>
+</html>
